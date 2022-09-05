@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.group-item{
+  display: flex;
+}
+.group-item:hover{
+  cursor: pointer;
+}
+
+.group-title:hover{
+  cursor: pointer;
+}
+
+.voting-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.voting-option{
+  display: flex;
+  flex-direction: row;
+  min-width: 450px;
+  margin-right: 2rem;
+}
+.vote-chips-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.chip-data{
+  margin-right: 1rem;
+}

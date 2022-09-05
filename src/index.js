@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import GroupList from './GroupList';
+import Proposal  from './Proposal';
+import Group  from './Group';
 import reportWebVitals from './reportWebVitals';
+import { Routes, Route, Link, BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<GroupList />}>
+
+              </Route>
+
+              <Route path="/groups/:groupID" element={<Group />}>
+
+              </Route>
+              <Route path="/groups/:groupID/proposal/:proposalID" element={<Proposal />} />
+          </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
